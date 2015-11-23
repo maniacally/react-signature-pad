@@ -12,7 +12,7 @@ module.exports = {
     path: __dirname + "/lib",
     filename: "app.js",
     library: 'SignaturePad',
-    libraryTarget: 'umd',
+    libraryTarget: 'umd'
   },
 
   externals: {
@@ -28,6 +28,6 @@ module.exports = {
         exclude: /node_modules/,
         loaders: ["babel-loader"]
       }
-    ],
+    ]
   }
 }
