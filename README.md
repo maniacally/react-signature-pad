@@ -1,5 +1,8 @@
 [![npm package](https://img.shields.io/badge/npm-0.0.3-orange.svg?style=flat-square)](https://www.npmjs.com/package/react-signature-pad)
 
+# History
+This module is forked from blackjs' initial module for capturing signatures. This module differs by allowing you to embed this signature pad within an existing from without a popup window. 
+
 # React Signature Pad
 A [signature pad](https://github.com/szimek/signature_pad) implementation for react.
 
