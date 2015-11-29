@@ -18,6 +18,7 @@ export default class SignaturePad extends React.Component {
         this.onEnd = this.props.onEnd;
         this.onBegin = this.props.onBegin;
         this.dataURL = undefined;
+   	this.onClear = this.props.onClear;
     }
 
     componentDidMount() {
@@ -356,6 +357,12 @@ export default class SignaturePad extends React.Component {
     }
 
 ;
+    handleClearButton(e){
+	if(typeof this.onClear === 'function'){
+		this.onClear();
+	}
+	this.clear(e);
+    }
 
     render() {
         return (
@@ -365,7 +372,7 @@ export default class SignaturePad extends React.Component {
                 </div>
                 { this.props.clearButton &&
                 <div className="m-signature-pad--footer">
-                    <button className="btn btn-default button clear" onClick={this.clear.bind(this)}>Clear</button>
+                    <button className="btn btn-default button clear" onClick={this.handleClearButton.bind(this)}>Clear</button>
                 </div>
                 }
             </div>
